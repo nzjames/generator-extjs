@@ -1,0 +1,37 @@
+{
+    "name": "generator-extjs",
+    "version": "0.0.1",
+    "description": "Yeoman generator for ExtJS",
+    "license": "MIT",
+    "main": "app/index.js",
+    "repository": "xersus/generator-extjs",
+    "author": {
+        "name": "Artem Malieiev",
+        "email": "artem.malieiev@gmail.com",
+        "url": "https://github.com/xersus"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "files": [
+        "app"
+    ],
+    "keywords": [
+        "yeoman-generator",
+        "extjs"
+    ],
+    "dependencies": {
+        "yeoman-generator": "~0.16.0",
+        "chalk": "~0.4.0",
+        "yosay": "^0.1.0"
+    },
+    "devDependencies": {
+        "mocha": "*"
+    },
+    "peerDependencies": {
+        "yo": ">=1.0.0"
+    }
+}
