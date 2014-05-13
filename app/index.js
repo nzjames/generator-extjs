@@ -26,28 +26,30 @@ var ExtjsGenerator = yeoman.generators.Base.extend({
         var prompts = [
             {
                 type: 'input',
-                name: 'title',
+                name: 'appName',
                 message: 'How would you like to call your project?',
-                default: 'App'
+                default: 'MyApp'
             }
         ];
 
         this.prompt(prompts, function (props) {
             this.data = props;
-
             done();
         }.bind(this));
     },
 
     app: function () {
-        this.mkdir('app');
         this.copy('_package.json', 'package.json');
         this.copy('_bower.json', 'bower.json');
-
         this.copy('editorconfig', '.editorconfig');
         this.copy('jshintrc', '.jshintrc');
+    },
 
-        this.template('index.html', 'index.html');
+    projectFiles: function(){
+        this.template('src/index.html', 'src/index.html');
+        this.template('src/app.js', 'src/app.js');
+        this.template('src/app/view/Login.js', 'src/app/view/Login.js');
+        this.template('src/app/controller/Login.js', 'src/app/controller/Login.js');
     }
 });
 
