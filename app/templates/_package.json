@@ -1,5 +1,15 @@
 {
-    "name": "package",
+    "name": "<%= data.appName %>",
     "version": "0.0.0",
-    "dependencies": {}
+    "devDependencies": {
+        "grunt": "latest",
+        "load-grunt-tasks": "latest",
+        "time-grunt": "latest",
+        "grunt-open": "latest",
+        "grunt-contrib-connect": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-watch": "latest"
+    }
 }

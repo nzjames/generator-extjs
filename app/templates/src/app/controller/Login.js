@@ -3,20 +3,20 @@ Ext.define('<%= data.appName %>.controller.Login', {
 
     init: function(){
         this.control({
-            'button#login-loginButton': {
-                click: this.onLoginButtonClick
+            'button#login-btn': {
+                click: this.onLoginBtnClick
             },
-            'button#login-cancelButton': {
-                click: this.onCancelButtonClick
+            'button#login-cancel-btn': {
+                click: this.onLoginCancelBtnClick
             }
         });
     },
 
-    onLoginButtonClick: function(){
+    onLoginBtnClick: function(){
         console.log('login');
     },
 
-    onCancelButtonClick: function(){
+    onLoginCancelBtnClick: function(){
         console.log('cancel');
     }
 });

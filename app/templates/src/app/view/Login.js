@@ -8,11 +8,11 @@ Ext.define('<%= data.appName %>.view.Login', {
     },
     items: [
         {
-            id: 'login-loginField',
+            id: 'login-field',
             fieldLabel: 'login'
         },
         {
-            id: 'login-passwordField',
+            id: 'password-field',
             inputType: 'password',
             fieldLabel: 'password'
         }
@@ -20,11 +20,11 @@ Ext.define('<%= data.appName %>.view.Login', {
     bbar: [
         '->',
         {
-            id: 'login-cancelButton',
+            id: 'login-cancel-btn',
             text: 'cancel'
         },
         {
-            id: 'login-loginButton',
+            id: 'login-btn',
             text: 'login'
         }
     ]
