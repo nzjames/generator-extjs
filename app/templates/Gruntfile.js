@@ -25,12 +25,21 @@ module.exports = function(grunt){
                 files: 'src/index.html'
             },
             scripts: {
-                files: ['src/**/*.js']
+                files: ['src/**/*.js'],
+                tasks: ['jshint:scripts']
             }
+        },
+        jshint: {
+            options: {
+                jshintrc: true,
+                reporter: require('jshint-stylish')
+            },
+            scripts: 'src/**/*.js'
         }
     });
 
     grunt.registerTask('server', [
+        'jshint',
         'connect:devserver',
         'open:devserver',
         'watch'

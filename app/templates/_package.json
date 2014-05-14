@@ -6,6 +6,7 @@
         "load-grunt-tasks": "latest",
         "time-grunt": "latest",
         "grunt-open": "latest",
+        "jshint-stylish": "latest",
         "grunt-contrib-connect": "latest",
         "grunt-contrib-concat": "latest",
         "grunt-contrib-uglify": "latest",

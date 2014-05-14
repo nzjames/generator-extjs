@@ -40,7 +40,7 @@ var ExtjsGenerator = yeoman.generators.Base.extend({
 
     app: function () {
         this.template('_package.json', 'package.json');
-        this.copy('_bower.json', 'bower.json');
+        this.template('_bower.json', 'bower.json');
         this.copy('editorconfig', '.editorconfig');
         this.copy('jshintrc', '.jshintrc');
         this.copy('gitignore', '.gitignore');
