@@ -52,6 +52,9 @@ var ExtjsGenerator = yeoman.generators.Base.extend({
         this.template('src/app.js', 'src/app.js');
         this.template('src/app/view/Login.js', 'src/app/view/Login.js');
         this.template('src/app/controller/Login.js', 'src/app/controller/Login.js');
+        this.template('src/tests/login/login.js', 'src/tests/login/login.js');
+        this.template('src/siesta/index.html', 'src/siesta/index.html');
+        this.template('src/siesta/index.js', 'src/siesta/index.js');
     }
 });
 
