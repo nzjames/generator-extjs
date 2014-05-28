@@ -1,8 +1,8 @@
 Ext.define('<%= data.appName %>.view.Login', {
     extend: 'Ext.window.Window',
     requires: [
-        'MyApp.view.LoginModel',
-        'MyApp.view.LoginController'
+        '<%= data.appName %>.view.LoginModel',
+        '<%= data.appName %>.view.LoginController'
     ],
     viewModel: {type: 'login'},
     controller: 'login',
