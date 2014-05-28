@@ -1,7 +1,7 @@
 Ext.define('<%= data.appName %>.view.Login', {
     extend: 'Ext.window.Window',
     alias: 'widget.login',
-    title: 'Login',
+    title: <%= data.appName %>.locale.LOGIN,
     items: [
         {
             xtype: 'form',
@@ -12,12 +12,12 @@ Ext.define('<%= data.appName %>.view.Login', {
             items: [
                 {
                     itemId: 'login',
-                    fieldLabel: 'login'
+                    fieldLabel: <%= data.appName %>.locale.LOGIN
                 },
                 {
                     itemId: 'password',
                     inputType: 'password',
-                    fieldLabel: 'password'
+                    fieldLabel: <%= data.appName %>.locale.PASSWORD
                 }
             ]
         }
@@ -26,11 +26,11 @@ Ext.define('<%= data.appName %>.view.Login', {
         '->',
         {
             itemId: 'cancel',
-            text: 'cancel'
+            text: <%= data.appName %>.locale.CANCEL
         },
         {
             itemId: 'login',
-            text: 'login'
+            text: <%= data.appName %>.locale.LOGIN
         }
     ]
 });

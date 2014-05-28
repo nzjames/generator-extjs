@@ -32,9 +32,7 @@ module.exports = function(grunt){
     grunt.registerTask('server', [
         'connect:devserver',
         'open:devserver',
+        'open:siesta',
         'watch'
-    ]);
-    grunt.registerTask('siesta', [
-        'open:siesta'
     ]);
 };
