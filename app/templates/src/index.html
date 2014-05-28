@@ -2,8 +2,14 @@
 <html>
 <head>
     <title><%= data.appName %></title>
+    <% if (options.extJS5) { %>
+    <link rel="stylesheet" href="https://extjs.cachefly.net/ext/beta/ext-5.0.0.736/packages/ext-theme-crisp/build/resources/ext-theme-crisp-all.css"/>
+    <script src="https://extjs.cachefly.net/ext/beta/ext-5.0.0.736/build/ext-all.js"></script>
+    <script src="https://extjs.cachefly.net/ext/beta/ext-5.0.0.736/packages/ext-theme-crisp/build/ext-theme-crisp.js"></script>
+    <% } else { %>
     <link rel="stylesheet" href="http://cdn.sencha.io/ext-4.2.0-gpl/resources/css/ext-all.css"/>
     <script src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-all.js"></script>
+    <% } %>
     <script src="app.js"></script>
 </head>
 <body>

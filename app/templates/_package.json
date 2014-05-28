@@ -1,16 +1,11 @@
 {
     "name": "<%= data.appName %>",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "devDependencies": {
         "grunt": "latest",
         "load-grunt-tasks": "latest",
-        "time-grunt": "latest",
         "grunt-open": "latest",
-        "jshint-stylish": "latest",
         "grunt-contrib-connect": "latest",
-        "grunt-contrib-concat": "latest",
-        "grunt-contrib-uglify": "latest",
-        "grunt-contrib-jshint": "latest",
         "grunt-contrib-watch": "latest"
     }
 }

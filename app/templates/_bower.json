@@ -1,6 +1,0 @@
-{
-    "name": "<%= data.appName %>",
-    "version": "0.0.0",
-    "dependencies": {}
-}
-

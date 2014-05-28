@@ -1,6 +1,5 @@
 module.exports = function(grunt){
     require('load-grunt-tasks')(grunt);
-    require('time-grunt')(grunt);
 
     grunt.initConfig({
         connect: {
@@ -15,33 +14,27 @@ module.exports = function(grunt){
         open: {
             devserver: {
                 path: "http://localhost:5000"
+            },
+            siesta: {
+                path: 'http://localhost:5000/siesta'
             }
         },
         watch: {
             options: {
                 livereload: true
             },
-            html: {
-                files: 'src/index.html'
-            },
             scripts: {
-                files: ['src/**/*.js'],
-                tasks: ['jshint:scripts']
+                files: ['src/**/*.js']
             }
-        },
-        jshint: {
-            options: {
-                jshintrc: true,
-                reporter: require('jshint-stylish')
-            },
-            scripts: 'src/**/*.js'
         }
     });
 
     grunt.registerTask('server', [
-        'jshint',
         'connect:devserver',
         'open:devserver',
         'watch'
+    ]);
+    grunt.registerTask('siesta', [
+        'open:siesta'
     ]);
 };

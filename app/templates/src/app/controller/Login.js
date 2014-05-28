@@ -1,22 +1,29 @@
 Ext.define('<%= data.appName %>.controller.Login', {
     extend: 'Ext.app.Controller',
 
+    refs: [
+        {ref: 'loginWindow', selector: 'login'}
+    ],
+
     init: function(){
         this.control({
             'login button#login': {
                 click: this.onLoginBtnClick
             },
             'login button#cancel': {
-                click: this.onLoginCancelBtnClick
+                click: this.onCancelBtnClick
             }
         });
     },
 
     onLoginBtnClick: function(){
-        console.log('login');
+        Ext.Msg.alert('Login', 'Login success!');
     },
 
-    onLoginCancelBtnClick: function(){
-        console.log('cancel');
+    onCancelBtnClick: function(){
+        var loginWindow = this.getLoginWindow(),
+            form = loginWindow.down('form').getForm();
+
+        form.reset();
     }
 });
