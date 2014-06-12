@@ -60,6 +60,7 @@ var ExtjsGenerator = yeoman.generators.Base.extend({
     projectFiles: function(){
         this.template('src/index.html', 'src/index.html');
         this.template('src/app.js', 'src/app.js');
+        this.template('src/sass/all.sass', 'src/sass/all.sass');
         this.template('src/locale/en.js', 'src/locale/en.js');
         this.template('src/tests/login/login.js', 'src/tests/login/login.js');
         this.template('src/siesta/index.html', 'src/siesta/index.html');
