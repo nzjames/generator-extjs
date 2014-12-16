@@ -15,9 +15,6 @@ module.exports = function(grunt){
         open: {
             devserver: {
                 path: "http://localhost:5000"
-            },
-            siesta: {
-                path: 'http://localhost:5000/siesta'
             }
         },
         watch: {
@@ -29,7 +26,7 @@ module.exports = function(grunt){
             },
             sass: {
                 files: 'src/sass/**/*.scss',
-                tasks: ['compass', 'autoprefixer']
+                tasks: ['sass:dist', 'autoprefixer']
             }
         },
         copy: {
@@ -74,27 +71,29 @@ module.exports = function(grunt){
                 dest: 'src/css/all.css'
             }
         },
-        compass: {
-            sass: {
-                options: {
-                    sassDir: 'src/sass',
-                    cssDir: 'src/css'
+        sass: {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    'src/css/all.css': 'src/sass/all.scss'
                 }
             }
+
         }
     });
 
     grunt.registerTask('server', [
-        'compass',
+        'sass',
         'autoprefixer',
         'connect:devserver',
         'open:devserver',
-        'open:siesta',
         'watch'
     ]);
     grunt.registerTask('build', [
         'clean',
-        'compass',
+        'sass',
         'autoprefixer',
         'copy',
         'concat',
